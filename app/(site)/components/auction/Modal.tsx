@@ -99,6 +99,9 @@ const LiveAuction = ({
                       </div>
                       <div className="flex flex-row justify-between items-center gap-x-5">
                         <div className="basis-4/5 grow">
+                          <span className="text-base font-medium italic capitalize text-[#BCB7B7]">
+                            creator: {product.creator}
+                          </span>
                           <div className="relative items-center rounded-3xl p-1.5 flex  w-full border">
                             <Input
                               type="text"
@@ -123,7 +126,7 @@ const LiveAuction = ({
                       </div>
                     </div>
                   </div>
-                  <Link href={"/drops"} className="flex flex-row gap-x-5">
+                  <Link href={"/drop"} className="flex flex-row gap-x-5">
                     <h2 className="text-3xl font-semibold">
                       See upcoming drops
                     </h2>
@@ -193,6 +196,9 @@ const LiveAuction = ({
                     </div>
                     <div className="flex flex-row justify-between items-center gap-x-5">
                       <div className="basis-4/5">
+                        <span className="text-base font-medium italic capitalize text-white">
+                          creator: {product.creator}
+                        </span>
                         <div className="relative items-center rounded-2xl flex  w-full border">
                           <Input
                             type="text"

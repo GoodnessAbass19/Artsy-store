@@ -9,6 +9,7 @@ import CloseIcon from "../ui/custom-icons/CloseIcon";
 import MenuIcon from "../ui/custom-icons/MenuIcon";
 import { useSelectedLayoutSegment } from "next/navigation";
 import NavLink from "./NavLink";
+import { useCartStore } from "@/store/CartStore";
 
 const Header = () => {
   const segment = useSelectedLayoutSegment();
@@ -18,6 +19,7 @@ const Header = () => {
     { name: "Auctions", link: "/auctions" },
     { name: "Drops", link: "/drop" },
   ];
+  const items = useCartStore((state) => state.items);
 
   return (
     <header>
@@ -97,9 +99,11 @@ const Header = () => {
                   open ? "block" : "hidden"
                 } `}
               >
-                <Link href={"/"}>
-                  <ChatIcon className="md:w-7 md:h-7 w-5 h-5" />
-                </Link>{" "}
+                <div>
+                  <Link href={"/"}>
+                    <ChatIcon className="md:w-7 md:h-7 w-5 h-5" />
+                  </Link>{" "}
+                </div>
               </div>
             </ul>
           </div>
@@ -109,8 +113,19 @@ const Header = () => {
               open ? "hidden" : "block"
             }`}
           >
-            <CartIcon className="md:w-7 md:h-7 w-5 h-5" />
             <SearchIcon className="md:w-7 md:h-7 w-5 h-5" />
+            <div>
+              <Link href={"/marketplace/cart"} className="relative">
+                <div>
+                  <CartIcon className="md:w-7 md:h-7 w-5 h-5" />
+
+                  {items.length > 0 && (
+                    <div className="bg-red-500 w-2.5 h-2.5 rounded-full absolute top-[-2px] right-0 animate-bounce"></div>
+                  )}
+                </div>
+              </Link>
+            </div>
+
             <NotificationIcon className="md:w-7 md:h-7 w-5 h-5 hidden md:block" />
           </div>
         </div>

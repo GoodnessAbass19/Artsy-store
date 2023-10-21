@@ -143,6 +143,45 @@ const topBid = [
   },
 ];
 
+const drops = [
+  {
+    title: "Eyo : Eko For Show",
+    creator: "Aliya Minat",
+    time: "06  hrs : 45 min : 22 s",
+    upcoming: true,
+    live: false,
+    ended: false,
+    image: "/assets/drops/eyo.jpeg",
+  },
+  {
+    title: "Ginger Suburbs",
+    creator: "Tina Benson",
+    time: "06  hrs : 45 min : 22 s",
+    upcoming: false,
+    live: true,
+    ended: false,
+    image: "/assets/drops/ginger.jpeg",
+  },
+  {
+    title: "Sink",
+    creator: "Aliya Minat",
+    time: "2 hours ago",
+    upcoming: false,
+    live: false,
+    ended: true,
+    image: "/assets/drops/sink.jpeg",
+  },
+  {
+    title: "Warped ‘99",
+    creator: "Tina Benson",
+    time: "5 hours ago",
+    upcoming: false,
+    live: false,
+    ended: true,
+    image: "/assets/drops/warped.jpeg",
+  },
+];
+
 export {
   mobileImage,
   desktopImages,
@@ -152,4 +191,5 @@ export {
   category,
   comments,
   topBid,
+  drops,
 };
