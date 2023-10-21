@@ -60,8 +60,8 @@ const page = async ({ params }: { params: { market: string } }) => {
             <Image
               src={product.thumbnail}
               alt={product.title}
-              width={1000}
-              height={1000}
+              width={500}
+              height={500}
               loading="lazy"
               className="w-full h-full object-cover"
             />

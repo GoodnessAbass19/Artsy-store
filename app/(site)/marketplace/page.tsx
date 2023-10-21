@@ -19,6 +19,14 @@ import { category } from "../components/constants";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import ItemCard from "../components/ui/ItemCard";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: `Marketplace`,
+    description: "List of all products",
+  };
+}
 
 const page = async () => {
   const product: ProductType[] = await getProduct();

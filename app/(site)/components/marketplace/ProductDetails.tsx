@@ -14,6 +14,8 @@ import MinusIcon from "../ui/custom-icons/MinusIcon";
 import PlusIcon from "../ui/custom-icons/PlusIcon";
 import { FormatCurrencyValue } from "@/utils/formatCurrency";
 import EthereumIcon from "../ui/custom-icons/EthereumIcon";
+import ArrowRightIcon from "../ui/custom-icons/ArrowRightIcon";
+import HeartIcon from "../ui/custom-icons/HeartIcon";
 
 const ProductDetail = ({
   id,
@@ -111,19 +113,19 @@ const ProductDetail = ({
               </button>
             </div>
 
-            {/* <AddToCartButton name={name} data={data} /> */}
-            {/* <Button
-          variant={"outline"}
-          className="flex items-center justify-center w-full max-w-[157px] md:min-w-[157px] h-10 text-sm text-black bg-[#ffe4c4] border border-[#ffe4c4] rounded trans-150"
-          onClick={() => {
-            {
-              addToCart(data);
-            }
-            router.push("/cart");
-          }}
-        >
-          Buy Now
-        </Button> */}
+            <Button
+              onClick={() => {
+                addToCart(data);
+              }}
+              variant={"outline"}
+              className="bg-black text-white flex gap-2 items-center text-2xl font-medium px-5 py-3"
+            >
+              Add to cart <ArrowRightIcon className="w-4 h-4 -scale-100" />
+            </Button>
+
+            <div className="border-2 border-black px-2">
+              <HeartIcon className="w-10 h-10 hover:fill-[#F44336] hover:stroke-none" />
+            </div>
           </div>
         </div>
 

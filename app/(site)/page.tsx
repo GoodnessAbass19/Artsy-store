@@ -4,7 +4,6 @@ import Featured from "./components/home/Featured";
 import Exhibition from "./components/home/Exhibition";
 import Explore from "./components/home/Explore";
 import Creators from "./components/home/Creators";
-import NewsLetter from "./components/home/NewsLetter";
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
       <Exhibition />
       <Explore />
       <Creators />
-      <NewsLetter />
     </main>
   );
 }

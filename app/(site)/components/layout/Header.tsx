@@ -49,13 +49,12 @@ const Header = () => {
                   className={`${
                     !segment ? "border-b-2 border-black" : "border-none"
                   }`}
-                  onClick={() => setOpen(!open)}
                 >
                   Home
                 </Link>
               </li>
               {menuLinks.map((links, i) => (
-                <li key={i} onClick={() => setOpen(!open)}>
+                <li key={i}>
                   <NavLink href={links.link}>{links.name}</NavLink>
                 </li>
               ))}
@@ -69,12 +68,14 @@ const Header = () => {
             }`}
           >
             <div className="flex justify-between items-center">
-              <h1
+              <Link
+                href={"/"}
+                onClick={() => setOpen(!open)}
                 className={`text-2xl font-semibold font-serif`}
                 style={{ fontFamily: "Playfair Display SC" }}
               >
                 ARTSY.
-              </h1>
+              </Link>
               <CloseIcon
                 className="w-7 h-7 font-bold"
                 onClick={() => setOpen(!open)}

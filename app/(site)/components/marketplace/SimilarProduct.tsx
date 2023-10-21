@@ -13,14 +13,18 @@ import ArrowLeftIcon from "../ui/custom-icons/ArrowLeftIcon";
 import Image from "next/image";
 import HeartIcon from "../ui/custom-icons/HeartIcon";
 import { FormatCurrencyValue } from "@/utils/formatCurrency";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const SimilarProduct = ({ product }: { product: ProductType[] }) => {
   const [nextEl, nextElRef] = useSwiperRef<HTMLButtonElement>();
   const [prevEl, prevElRef] = useSwiperRef<HTMLButtonElement>();
+  const router = useRouter();
 
   return (
     <div>
-      <div className="w-full mt-20">
+      <div className="w-full mt-20 space-y-10">
         <Swiper
           slidesPerView="auto"
           breakpoints={breakpoints}
@@ -66,7 +70,7 @@ const SimilarProduct = ({ product }: { product: ProductType[] }) => {
                 <HeartIcon className="w-7 h-7 hover:fill-[#F44336] hover:stroke-none" />
               </div>
 
-              <div className="lg:px-5">
+              <Link href={`/marketplace/${item.slug}`} className="lg:px-5">
                 <Image
                   src={item.thumbnail}
                   alt={item.title}
@@ -83,10 +87,20 @@ const SimilarProduct = ({ product }: { product: ProductType[] }) => {
                     {FormatCurrencyValue(item.price)}
                   </span>
                 </div>
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
+
+        <div className="flex flex-col justify-center items-center w-full h-full">
+          <Button
+            onClick={() => router.push("/marketplace")}
+            variant={"outline"}
+            className="md:text-2xl text-xl capitalize font-medium border-black border-2"
+          >
+            Explore all
+          </Button>
+        </div>
       </div>
     </div>
   );

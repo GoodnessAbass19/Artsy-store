@@ -96,6 +96,53 @@ const fadeImage = [
 
 const category = ["editorial", "fashion", "optic", "art & nature", "nature"];
 
+const comments = [
+  {
+    image: "/assets/comments/samy.png",
+    name: "samy allen",
+    text: "i love this. $20.00 for me",
+  },
+  {
+    image: "/assets/comments/allen.png",
+    name: "Opeyemi Tiwalope",
+    text: "$45.00",
+  },
+  {
+    image: "/assets/comments/celestina.png",
+    name: "Celestina Quinn",
+    text: "gm frens! ready to bidddd",
+  },
+  {
+    image: "/assets/comments/luca.png",
+    name: "uncle luca",
+    text: "instant bid",
+  },
+  {
+    image: "/assets/comments/ella.png",
+    name: "ella flynn",
+    text: "tight bid",
+  },
+];
+
+const topBid = [
+  {
+    title: "Out of the box",
+    creator: "Dan Murray",
+    date: "12/08/22",
+    highestBid: "0.57 ETH",
+    currentBid: "0.987 ETH",
+    image: "/assets/topBid/box.jpeg",
+  },
+  {
+    title: "Falling apart",
+    creator: "Jacob Banks",
+    date: "12/08/22",
+    highestBid: "0.34 ETH",
+    currentBid: "0.99 ETH",
+    image: "/assets/topBid/falling.jpeg",
+  },
+];
+
 export {
   mobileImage,
   desktopImages,
@@ -103,4 +150,6 @@ export {
   creators,
   fadeImage,
   category,
+  comments,
+  topBid,
 };

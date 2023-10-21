@@ -52,3 +52,20 @@ export async function getProductsByCategory(category: string) {
     { category }
   );
 }
+
+export async function getAuctionProducts() {
+  return client.fetch(
+    groq`*[_type == "product" && category._ref in *[_type == "collection" && name == "Auction"]._id] {
+       _id,
+          title,
+          description,
+          "slug": slug.current,
+      "thumbnail": thumbnail.asset->url,
+          price,
+          made,
+          creator,
+          views,
+          "category": category->{name},
+    }`
+  );
+}
