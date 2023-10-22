@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { drops } from "../components/constants";
 import Image from "next/image";
 import Link from "next/link";
+import CountdownTimer from "../components/home/Timer";
 
 const breadcrumbList = [
   {
@@ -74,7 +75,7 @@ const page = () => {
                       </h2>
                       <div className="flex gap-5 justify-between items-center">
                         <p className="text-2xl md:text-4xl font-normal">
-                          {item.time}
+                          <CountdownTimer targetDate={item.time} />
                         </p>
                         <Button className="bg-[#4693ED] text-white text-2xl w-[120px] py-1 font-medium rounded-full capitalize hidden md:block">
                           join
@@ -90,7 +91,7 @@ const page = () => {
                       </h2>
                       <div className="flex gap-5 justify-between items-center">
                         <p className="text-2xl md:text-4xl font-normal">
-                          {item.time}
+                          <CountdownTimer targetDate={item.time} />
                         </p>
                         <Button className="bg-[#4693ED] text-white text-2xl w-[120px] py-1 font-medium rounded-full capitalize hidden md:block">
                           join
@@ -105,7 +106,7 @@ const page = () => {
                       </h2>
                       <div className="flex gap-5 justify-between items-center">
                         <p className="text-2xl md:text-4xl font-normal">
-                          {item.time}
+                          <CountdownTimer targetDate={item.time} />
                         </p>
                         <Button className="bg-[#999EA5] text-white text-2xl w-[120px] py-1 font-medium rounded-full capitalize hidden md:block">
                           view

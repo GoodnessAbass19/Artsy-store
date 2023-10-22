@@ -10,6 +10,7 @@ export interface CartProduct {
   size?: string;
   color?: string;
   image?: any | "";
+  category: string;
 }
 
 // define zustand state and actions

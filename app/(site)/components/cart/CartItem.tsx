@@ -13,12 +13,14 @@ const CartItem = ({
   price,
   quantity,
   image,
+  category,
 }: {
   id: string;
   name: string;
   price: number;
   quantity: number;
   image: string;
+  category: string;
 }) => {
   const [removeItem, updateItemQuantity] = useCartStore((state) => [
     state.removeFromCart,
@@ -52,7 +54,7 @@ const CartItem = ({
             </button>
           </div>
 
-          <p className="text-[#888]">Clearamane</p>
+          <p className="text-[#888]">{category}</p>
           <p className="flex gap-x-2 items-center text-lg font-normal">
             <span className="text-[#888] capitalize">size:</span> 200 ft
           </p>

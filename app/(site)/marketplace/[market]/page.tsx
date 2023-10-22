@@ -68,6 +68,7 @@ const page = async ({ params }: { params: { market: string } }) => {
           </div>
           <div className="col-span-1 py-5">
             <ProductDetail
+              category={product.category.name}
               name={product.title}
               price={product.price}
               image={product.thumbnail}

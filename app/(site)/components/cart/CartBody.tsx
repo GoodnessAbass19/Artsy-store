@@ -27,13 +27,14 @@ const CartBody = () => {
                 price={item.price}
                 quantity={item.quantity}
                 image={item.image}
+                category={item.category}
               />
             </div>
           ))}
         </div>
 
         {/* checkout */}
-        <div className="lg:sticky md:top-[100px] rounded h-fit min-w-full sm:min-w-[400px] mx-auto max-w-[500px] overflow-hidden border border-primary-gray/20 ">
+        <div className="lg:sticky md:top-[100px] rounded h-fit w-full mx-auto max-w-full overflow-hidden border border-primary-gray/20 ">
           <div className="bg-primary-gray/10 px-4 py-3 ">
             <h3 className="text-lg md:text-xl font-semibold">Cart Total</h3>
           </div>

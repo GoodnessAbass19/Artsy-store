@@ -116,13 +116,13 @@ const Header = () => {
             <SearchIcon className="md:w-7 md:h-7 w-5 h-5" />
             <div>
               <Link href={"/marketplace/cart"} className="relative">
-                <div>
-                  <CartIcon className="md:w-7 md:h-7 w-5 h-5" />
+                <CartIcon className="md:w-7 md:h-7 w-5 h-5" />
 
+                <span>
                   {items.length > 0 && (
-                    <div className="bg-red-500 w-2.5 h-2.5 rounded-full absolute top-[-2px] right-0 animate-bounce"></div>
+                    <b className="bg-red-500 w-2.5 h-2.5 rounded-full absolute top-[-2px] right-0 animate-bounce"></b>
                   )}
-                </div>
+                </span>
               </Link>
             </div>
 

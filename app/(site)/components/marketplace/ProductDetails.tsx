@@ -27,6 +27,7 @@ const ProductDetail = ({
   made,
   creator,
   views,
+  category,
 }: {
   id: string;
   image: any;
@@ -37,6 +38,7 @@ const ProductDetail = ({
   made: string;
   creator: string;
   views: number;
+  category: string;
 }) => {
   const [quantity, setQuantity] = useState(1);
   const router = useRouter();
@@ -51,8 +53,9 @@ const ProductDetail = ({
       name,
       slug,
       quantity,
+      category,
     }),
-    [id, image, price, name, slug, quantity]
+    [id, image, price, name, slug, quantity, category]
   );
 
   return (

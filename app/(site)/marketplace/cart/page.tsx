@@ -11,6 +11,10 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+// type prop = {
+//   text: React.HTMLProps<HTMLElement>
+// }
+
 const breadcrumbList = [
   {
     title: "marketplace",
@@ -46,6 +50,13 @@ const page = () => {
           <CartPage />
         </TabsContent>
         <TabsContent value="shipping">
+          Change your password here. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quasi accusantium, repellendus eligendi, veritatis
+          fuga veniam inventore error quis cumque mollitia sint voluptatibus.
+          Delectus cumque nesciunt necessitatibus exercitationem dolores
+          repellendus ab.
+        </TabsContent>
+        <TabsContent value="payment">
           Change your password here. Lorem ipsum dolor sit amet consectetur
           adipisicing elit. Quasi accusantium, repellendus eligendi, veritatis
           fuga veniam inventore error quis cumque mollitia sint voluptatibus.

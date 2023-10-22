@@ -1,4 +1,3 @@
-import Breadcrumb from "../ui/Breadcrumb";
 import CartBody from "./CartBody";
 
 const CartPage = () => {

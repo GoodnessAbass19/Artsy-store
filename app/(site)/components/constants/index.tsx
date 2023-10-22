@@ -147,7 +147,7 @@ const drops = [
   {
     title: "Eyo : Eko For Show",
     creator: "Aliya Minat",
-    time: "06  hrs : 45 min : 22 s",
+    time: "2023-10-25",
     upcoming: true,
     live: false,
     ended: false,
@@ -156,7 +156,7 @@ const drops = [
   {
     title: "Ginger Suburbs",
     creator: "Tina Benson",
-    time: "06  hrs : 45 min : 22 s",
+    time: "2023-10-24",
     upcoming: false,
     live: true,
     ended: false,
@@ -165,7 +165,7 @@ const drops = [
   {
     title: "Sink",
     creator: "Aliya Minat",
-    time: "2 hours ago",
+    time: "2023-10-20",
     upcoming: false,
     live: false,
     ended: true,
@@ -174,7 +174,7 @@ const drops = [
   {
     title: "Warped ‘99",
     creator: "Tina Benson",
-    time: "5 hours ago",
+    time: "2023-10-23",
     upcoming: false,
     live: false,
     ended: true,
