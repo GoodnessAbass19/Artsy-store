@@ -1,6 +1,5 @@
 import React from "react";
 import Breadcrumb from "../components/ui/Breadcrumb";
-import Like from "../components/auction/Like";
 import { ProductType } from "@/types";
 import { getAuctionProducts } from "@/sanity/sanity.query";
 import Auction from "../components/auction/Auction";

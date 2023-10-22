@@ -5,11 +5,14 @@ import CartEmpty from "./CartEmpty";
 import CartItem from "./CartItem";
 import CheckoutList from "./CheckoutList";
 import { FormatCurrencyValue } from "@/utils/formatCurrency";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const CartBody = () => {
   const totalPrice = useCartStore((state) => state.totalPrice);
-
+  const totalItems = useCartStore((state) => state.totalItems);
   const items = useCartStore((state) => state.items);
+  const shipping = 2.5;
 
   if (items.length === 0) {
     return <CartEmpty />;
@@ -32,45 +35,39 @@ const CartBody = () => {
             </div>
           ))}
         </div>
-
         {/* checkout */}
-        <div className="lg:sticky md:top-[100px] rounded h-fit w-full mx-auto max-w-full overflow-hidden border border-primary-gray/20 ">
-          <div className="bg-primary-gray/10 px-4 py-3 ">
-            <h3 className="text-lg md:text-xl font-semibold">Cart Total</h3>
-          </div>
-
-          <div className="p-4 mt-6">
-            <CheckoutList
-              title="Sub Total"
-              value={FormatCurrencyValue(totalPrice)}
-            />
-            <hr className="border-primary-gray/20 mt-4 mb-6" />
-
-            <CheckoutList title="Delivery Cost" value="TBD" />
-            <hr className="border-primary-gray/20 mt-4 mb-6" />
-
-            <CheckoutList title="Discount" value="0%" />
-            <hr className="border-primary-gray/20 mt-4 mb-6" />
-
-            <CheckoutList
-              title="TOTAL"
-              value={FormatCurrencyValue(totalPrice)}
-            />
-          </div>
-
-          <div className="mt-4 mb-6 px-4 space-y-4">
-            <button
-              className="flex items-center justify-center w-full h-10 text-sm text-[#ffe4c4] dark:text-white hover:text-black hover:bg-[#ffe4c4]  border border-[#ffe4c4]  rounded trans-150"
-              onClick={() =>
-                useCartStore.setState({
-                  items: [],
-                  totalPrice: 0,
-                  totalItems: 0,
-                })
-              }
+        <div className="grid grid-cols-2 gap-x-10 items-center px-10">
+          <div className="space-y-10 flex justify-center flex-col items-center">
+            <Button
+              variant={"outline"}
+              className="bg-black text-white p-10  text-2xl font-medium"
             >
-              Clear Cart
-            </button>
+              Proceed to checkout
+            </Button>
+            <Link
+              href={"/marketplace"}
+              className="text-black text-xl w-fit font-medium border-b-2 border-black text-center"
+            >
+              Continue shopping
+            </Link>
+          </div>
+
+          <div className="lg:sticky md:top-[100px] rounded h-fit w-full mx-auto max-w-full overflow-hidden col-span-1">
+            <div className="p-4 mt-6">
+              <CheckoutList title="Products in cart:" value={totalItems} />
+              <hr className="border-primary-gray/20 mt-4 mb-6" />
+
+              <CheckoutList
+                title="Shipping Cost:"
+                value={FormatCurrencyValue(shipping)}
+              />
+              <hr className="border-primary-gray/20 mt-4 mb-6" />
+
+              <CheckoutList
+                title="TOTAL:"
+                value={FormatCurrencyValue(totalPrice + shipping)}
+              />
+            </div>
           </div>
         </div>
       </div>

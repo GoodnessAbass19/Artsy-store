@@ -7,9 +7,10 @@ import Link from "next/link";
 import NotificationIcon from "../ui/custom-icons/NotificationIcon";
 import CloseIcon from "../ui/custom-icons/CloseIcon";
 import MenuIcon from "../ui/custom-icons/MenuIcon";
-import { useSelectedLayoutSegment } from "next/navigation";
+import { useRouter, useSelectedLayoutSegment } from "next/navigation";
 import NavLink from "./NavLink";
 import { useCartStore } from "@/store/CartStore";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const segment = useSelectedLayoutSegment();
@@ -20,6 +21,7 @@ const Header = () => {
     { name: "Drops", link: "/drop" },
   ];
   const items = useCartStore((state) => state.items);
+  const router = useRouter();
 
   return (
     <header>
@@ -109,23 +111,22 @@ const Header = () => {
           </div>
 
           <div
-            className={`text-2xl lg:text-3xl font-semibold gap-2 flex ${
+            className={`text-2xl lg:text-3xl font-semibold gap-2 flex items-center ${
               open ? "hidden" : "block"
             }`}
           >
             <SearchIcon className="md:w-7 md:h-7 w-5 h-5" />
-            <div>
-              <Link href={"/marketplace/cart"} className="relative">
-                <CartIcon className="md:w-7 md:h-7 w-5 h-5" />
-
-                <span>
-                  {items.length > 0 && (
-                    <b className="bg-red-500 w-2.5 h-2.5 rounded-full absolute top-[-2px] right-0 animate-bounce"></b>
-                  )}
-                </span>
-              </Link>
-            </div>
-
+            <button
+              onClick={() => router.push("/marketplace/cart")}
+              className="relative"
+            >
+              <CartIcon className="md:w-7 md:h-7 w-5 h-5" />
+              {items.length > 0 ? (
+                <div className="bg-red-500 w-2.5 h-2.5 rounded-full absolute top-[-2px] right-0 animate-bounce" />
+              ) : (
+                <div />
+              )}
+            </button>
             <NotificationIcon className="md:w-7 md:h-7 w-5 h-5 hidden md:block" />
           </div>
         </div>

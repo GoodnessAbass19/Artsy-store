@@ -71,13 +71,13 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
   }, [isActive]);
 
   return (
-    <div>
+    <p>
       {isActive
         ? `${
             days === 0 ? `` : `${days}days:`
           } ${hours}hrs: ${minutes}mins: ${seconds}seconds left`
         : `${days === 0 ? `` : `${days}days and`}  ${hours} hours ago`}
-    </div>
+    </p>
   );
 };
 

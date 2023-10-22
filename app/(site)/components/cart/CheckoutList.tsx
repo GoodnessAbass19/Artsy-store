@@ -1,4 +1,4 @@
-const CheckoutList = ({ title, value }: { title: string; value: string }) => {
+const CheckoutList = ({ title, value }: { title: string; value: any }) => {
   return (
     <div className="flex justify-between items-center font-medium">
       <span className="text-primary-gray text-sm md:text-base">{title}</span>

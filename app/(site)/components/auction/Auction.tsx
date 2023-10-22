@@ -9,7 +9,6 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper/modules";
 import Image from "next/image";
 import Fetch from "./Fetch";
-import CountdownTimer from "../home/Timer";
 
 const Auction = ({ product }: { product: ProductType[] }) => {
   return (
@@ -29,7 +28,7 @@ const Auction = ({ product }: { product: ProductType[] }) => {
         {product.map((item) => (
           <SwiperSlide
             key={item._id}
-            className="my-10 relative cursor-pointer overflow-hidden"
+            className="my-10 relative cursor-pointer overflow-hidden max-w-[520px]"
           >
             <Fetch
               children={
@@ -40,10 +39,10 @@ const Auction = ({ product }: { product: ProductType[] }) => {
                     loading="lazy"
                     width={500}
                     height={500}
-                    className="rounded-xl w-[480px] h-[390px] object-cover"
+                    className="rounded-xl w-[520px] h-[390px] object-cover"
                   />
                   <div className="absolute transition-all ease-in-out bg-white/40 backdrop-blur-2xl duration-500 text-center w-full bottom-5 left-0 font-semibold flex justify-center flex-col items-center text-white text-3xl py-1.5">
-                    <CountdownTimer targetDate="2023-10-24" />
+                    6hr : 40mins: 15s
                   </div>
                 </div>
               }

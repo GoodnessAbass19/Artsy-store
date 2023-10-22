@@ -35,14 +35,23 @@ const page = () => {
         <Breadcrumb breadcrumbList={breadcrumbList} />
       </div>
       <Tabs defaultValue="shopping" className="max-w-7xl mx-auto">
-        <TabsList className="max-w-3xl mx-auto flex justify-center items-center">
-          <TabsTrigger value="shopping" className="text-lg font-medium">
+        <TabsList className="max-w-3xl mx-auto flex justify-center items-center px-5">
+          <TabsTrigger
+            value="shopping"
+            className="sm:text-lg text-sm font-medium"
+          >
             Shopping cart
           </TabsTrigger>
-          <TabsTrigger value="shipping" className="text-lg font-medium">
+          <TabsTrigger
+            value="shipping"
+            className="sm:text-lg text-sm font-medium"
+          >
             Shipping details
           </TabsTrigger>
-          <TabsTrigger value="payment" className="text-lg font-medium">
+          <TabsTrigger
+            value="payment"
+            className="sm:text-lg text-sm font-medium"
+          >
             Payment details
           </TabsTrigger>
         </TabsList>

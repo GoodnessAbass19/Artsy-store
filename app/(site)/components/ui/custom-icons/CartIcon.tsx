@@ -1,3 +1,4 @@
+"use client";
 const CartIcon = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg

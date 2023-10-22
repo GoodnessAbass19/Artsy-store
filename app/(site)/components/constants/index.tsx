@@ -90,7 +90,7 @@ const creators = [
 
 const fadeImage = [
   "/assets/Fade-Images/Top Creators Animation.png",
-  "/assets/Fade-Images/Rectangle 302.png",
+  "/assets/Fade-Images/black.png",
   "/assets/Fade-Images/Rectangle 301.png",
 ];
 
