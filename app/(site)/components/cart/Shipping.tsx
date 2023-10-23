@@ -27,6 +27,7 @@ import { useCartStore } from "@/store/CartStore";
 import CartItem from "./CartItem";
 import CheckoutList from "./CheckoutList";
 import { FormatCurrencyValue } from "@/utils/formatCurrency";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   email: z.string().min(2, {
@@ -76,7 +77,17 @@ const Shipping = () => {
       ),
     });
   }
-
+  function Submit(data: z.infer<typeof formSchema>) {
+    toast({
+      title: "You submitted the following values:",
+      description: (
+        <div className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+          <p className="text-white">thank you</p>
+        </div>
+      ),
+    });
+  }
+  const router = useRouter();
   const totalPrice = useCartStore((state) => state.totalPrice);
   const totalItems = useCartStore((state) => state.totalItems);
   const items = useCartStore((state) => state.items);
@@ -253,15 +264,20 @@ const Shipping = () => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full bg-black text-white">
+          <Button
+            type="submit"
+            className="w-full bg-black text-white md:block hidden"
+          >
             Proceed to payment
           </Button>
-          {/* <Link
-            href={"/marketplace/cart"}
-            className="text-black text-xl font-medium underline text-center pt-5 flex justify-center items-center flex-col"
+
+          <Button
+            type="submit"
+            onClick={() => router.push("/marketplace/payment")}
+            className="w-full bg-black text-white md:hidden block"
           >
-            Continue shopping
-          </Link> */}
+            Proceed to payment
+          </Button>
         </form>
 
         <div className="w-full h-full border-t hidden md:block">

@@ -23,7 +23,9 @@ export default function RootLayout({
         <Header />
 
         <main className="overflow-hidden">{children}</main>
-        <Toaster />
+        <div className="md:block hidden">
+          <Toaster />
+        </div>
         <Footer />
       </body>
     </html>

@@ -40,10 +40,16 @@ const CartBody = () => {
           <div className="space-y-10 flex justify-center flex-col items-center">
             <Button
               variant={"outline"}
-              className="bg-black text-white p-10  text-2xl font-medium"
+              className="bg-black text-white p-10  text-2xl font-medium hidden md:block"
             >
               Proceed to checkout
             </Button>
+            <Link
+              href={"/marketplace/shipping"}
+              className="bg-black text-white p-6 rounded-lg  text-2xl font-medium block md:hidden"
+            >
+              Proceed to checkout
+            </Link>
             <Link
               href={"/marketplace"}
               className="text-black text-xl w-fit font-medium border-b-2 border-black text-center"
@@ -68,6 +74,11 @@ const CartBody = () => {
 
               <CheckoutList
                 title="TOTAL:"
+                value={FormatCurrencyValue(totalPrice)}
+              />
+              <hr className="border-primary-gray/20 mt-4 mb-6" />
+              <CheckoutList
+                title="GRAND TOTAL:"
                 value={FormatCurrencyValue(totalPrice + shipping)}
               />
             </div>

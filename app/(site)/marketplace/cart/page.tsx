@@ -36,7 +36,10 @@ const page = () => {
       <div className="px-5 block md:hidden">
         <Breadcrumb breadcrumbList={breadcrumbList} />
       </div>
-      <Tabs defaultValue="shopping" className="max-w-7xl mx-auto">
+      <Tabs
+        defaultValue="shopping"
+        className="max-w-7xl mx-auto hidden md:block"
+      >
         <TabsList className="max-w-3xl mx-auto flex justify-center items-center px-5">
           <TabsTrigger
             value="shopping"
@@ -67,6 +70,10 @@ const page = () => {
           <Payment />
         </TabsContent>
       </Tabs>
+
+      <div>
+        <CartPage />
+      </div>
     </div>
   );
 };
