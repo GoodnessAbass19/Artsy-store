@@ -57,9 +57,9 @@ const page = async () => {
       </div>
 
       <section className="grid grid-cols-1 gap-x-10 gap-y-10 lg:grid-cols-4 max-w-7xl mx-auto mt-20">
-        <div className="hidden lg:block">
+        <div className="hidden lg:block px-5">
           <div className="w-full sticky top-10">
-            <Accordion type="single" collapsible>
+            <Accordion type="single" defaultValue="item-1" collapsible>
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-xl font-medium">
                   By category
@@ -81,7 +81,7 @@ const page = async () => {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            <Accordion type="single" collapsible>
+            <Accordion type="single" defaultValue="item-2" collapsible>
               <AccordionItem value="item-2">
                 <AccordionTrigger className="text-xl font-medium">
                   By price
@@ -99,7 +99,7 @@ const page = async () => {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-            <Accordion type="single" collapsible>
+            <Accordion type="single" defaultValue="item-3" collapsible>
               <AccordionItem value="item-3">
                 <AccordionTrigger className="text-xl font-medium">
                   By artist

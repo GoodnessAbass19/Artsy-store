@@ -31,8 +31,8 @@ const CartItem = ({
     <div
     //  className="flex items-start justify-between gap-4"
     >
-      <div className="grid grid-cols-5 items-center gap-x-5">
-        <div className=" relative col-span-2 md:col-span-1">
+      <div className="grid grid-cols-6 items-center gap-x-5">
+        <div className=" relative col-span-2">
           <Image
             className="object-cover w-[220px] h-[200px] rounded-lg"
             src={image}
@@ -43,7 +43,7 @@ const CartItem = ({
           />
         </div>
 
-        <div className="grid col-span-3 md:col-span-4 space-y-3">
+        <div className="grid col-span-4 space-y-3">
           <div className="flex flex-row justify-between items-center w-full">
             <h3 className="md:text-lg font-medium leading-tight">{name}</h3>
             <button
@@ -54,13 +54,13 @@ const CartItem = ({
             </button>
           </div>
 
-          <p className="text-[#888]">{category}</p>
-          <p className="flex gap-x-2 items-center text-lg font-normal">
+          <p className="text-[#888] italic">{category}</p>
+          <p className="flex gap-x-2 items-center text-base font-normal">
             <span className="text-[#888] capitalize">size:</span> 200 ft
           </p>
 
           <div className="flex justify-between items-center flex-row w-full">
-            <div className="flex items-center gap-2 border border-primary h-8 rounded  w-fit">
+            <div className="flex items-center gap-1 sm:gap-2 border border-primary h-8 rounded  w-fit">
               <button
                 className="h-full w-fit flex justify-center items-center px-3 bg-primary-gray/10"
                 onClick={() => updateItemQuantity(id, "decrease")}
@@ -76,7 +76,7 @@ const CartItem = ({
               </button>
             </div>
 
-            <span className="font-semibold text-xl md:text-2xl">
+            <span className="font-semibold text-lg md:text-2xl">
               {FormatCurrencyValue(price)}
             </span>
           </div>

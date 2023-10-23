@@ -4,7 +4,7 @@ import React from "react";
 
 const NewsLetter = () => {
   return (
-    <div className="mt-28 px-5 lg:p-10 max-w-7xl lg:mx-auto lg:border-2 border-black flex flex-col items-center justify-center gap-y-5">
+    <div className="mt-28 px-5 lg:p-10 max-w-7xl mx-5 lg:mx-auto lg:border-2 border-black flex flex-col items-center justify-center gap-y-5">
       <h2
         style={{ fontFamily: "Playfair Display SC" }}
         className="text-4xl uppercase font-normal"

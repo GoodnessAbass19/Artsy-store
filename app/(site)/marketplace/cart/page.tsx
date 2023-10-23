@@ -3,6 +3,8 @@ import React from "react";
 import CartPage from "../../components/cart";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Breadcrumb from "../../components/ui/Breadcrumb";
+import Shipping from "../../components/cart/Shipping";
+import Payment from "../../components/cart/Payment";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -59,18 +61,10 @@ const page = () => {
           <CartPage />
         </TabsContent>
         <TabsContent value="shipping">
-          Change your password here. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quasi accusantium, repellendus eligendi, veritatis
-          fuga veniam inventore error quis cumque mollitia sint voluptatibus.
-          Delectus cumque nesciunt necessitatibus exercitationem dolores
-          repellendus ab.
+          <Shipping />
         </TabsContent>
         <TabsContent value="payment">
-          Change your password here. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quasi accusantium, repellendus eligendi, veritatis
-          fuga veniam inventore error quis cumque mollitia sint voluptatibus.
-          Delectus cumque nesciunt necessitatibus exercitationem dolores
-          repellendus ab.
+          <Payment />
         </TabsContent>
       </Tabs>
     </div>

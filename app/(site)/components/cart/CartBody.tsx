@@ -23,7 +23,7 @@ const CartBody = () => {
         {/* cart */}
         <div className="w-full h-full border-t pt-5">
           {items?.map((item) => (
-            <div key={item.slug} className="border-b p-4 md:p-6  my-2.5">
+            <div key={item.slug} className="border-b p-2 sm:p-4 md:p-6  my-2.5">
               <CartItem
                 id={item.id}
                 name={item.name}
@@ -36,7 +36,7 @@ const CartBody = () => {
           ))}
         </div>
         {/* checkout */}
-        <div className="grid grid-cols-2 gap-x-10 items-center px-10">
+        <div className="md:grid md:grid-cols-2 flex flex-col-reverse gap-10 items-center px-10">
           <div className="space-y-10 flex justify-center flex-col items-center">
             <Button
               variant={"outline"}
@@ -54,7 +54,10 @@ const CartBody = () => {
 
           <div className="lg:sticky md:top-[100px] rounded h-fit w-full mx-auto max-w-full overflow-hidden col-span-1">
             <div className="p-4 mt-6">
-              <CheckoutList title="Products in cart:" value={totalItems} />
+              <CheckoutList
+                title="Products in cart:"
+                value={`${totalItems} items`}
+              />
               <hr className="border-primary-gray/20 mt-4 mb-6" />
 
               <CheckoutList
