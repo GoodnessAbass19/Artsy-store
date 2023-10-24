@@ -49,17 +49,17 @@ const mobileImage = [
 
 const FeaturedProduct = [
   {
-    image: "/assets/Home-Image/image-1.png",
+    image: "/assets/Home-Image/boolean.png",
     header: "The Boolean Egyptian",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Nisi fugiat quis expedita pariatur non alias sunt repellatneque delectus! Eius provident minima doloremque cumque?Autem.",
   },
   {
-    image: "/assets/Home-Image/image-2.png",
+    image: "/assets/Home-Image/there.png",
     header: "Are We There Yet?",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Nisi fugiat quis expedita pariatur non alias sunt repellatneque delectus! Eius provident minima doloremque cumque?Autem.",
   },
   {
-    image: "/assets/Home-Image/image-3.jpg",
+    image: "/assets/Home-Image/egypt.jpg",
     header: "Oloibiri 1997",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Nisi fugiat quis expedita pariatur non alias sunt repellatneque delectus! Eius provident minima doloremque cumque?Autem.",
   },
@@ -89,9 +89,9 @@ const creators = [
 ];
 
 const fadeImage = [
-  "/assets/Fade-Images/Top Creators Animation.png",
+  "/assets/Fade-Images/Top.png",
   "/assets/Fade-Images/black.png",
-  "/assets/Fade-Images/Rectangle 301.png",
+  "/assets/Fade-Images/Rectangle.png",
 ];
 
 const category = ["editorial", "fashion", "optic", "art & nature", "nature"];
