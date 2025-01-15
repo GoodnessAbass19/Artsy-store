@@ -3,9 +3,8 @@
 // swiper js modules and css import
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import "swiper/css/effect-cards";
+import "swiper/css/effect-creative";
 import { EffectCards, EffectCreative, Autoplay } from "swiper/modules";
 // array of images
 import { desktopImages, mobileImage } from "../constants";
@@ -15,7 +14,7 @@ const Hero = () => {
   return (
     <section className="max-w-full mx-auto my-20 z-[-1]">
       {/* desktop slides */}
-      <div className="lg:flex flex-row w-full hidden gap-x-5 px-5">
+      <div className="lg:grid grid-cols-4 items-center justify-center w-full hidden gap-x-5 px-5">
         {desktopImages.map((item, idx) => (
           <Swiper
             key={idx}
@@ -34,16 +33,19 @@ const Hero = () => {
             }}
             loop={true}
             modules={[EffectCreative, Autoplay]}
-            className="basis-1/4 transition-all duration-150 ease-linear"
+            className="w-full h-full col-span-1"
           >
             {item.image.map((img, idx) => (
-              <SwiperSlide key={idx}>
+              <SwiperSlide
+                key={idx}
+                className="flex justify-center items-center"
+              >
                 <Image
                   alt="hero-img"
                   src={img}
-                  width={1000}
-                  height={1000}
-                  loading="lazy"
+                  width={500}
+                  height={500}
+                  // loading="lazy"
                   className="object-contain object-center w-full h-full"
                 />
               </SwiperSlide>
@@ -62,7 +64,7 @@ const Hero = () => {
             slideShadows: false,
           }}
           modules={[EffectCards, Autoplay]}
-          className=" max-w-xs md:max-w-xl mx-auto lg:hidden block transition-all duration-150 ease-linear"
+          className="max-w-xs md:max-w-xl mx-auto lg:hidden block transition-all duration-150 ease-linear"
         >
           {mobileImage[0].Image.map((img, idx) => (
             <SwiperSlide key={idx}>
