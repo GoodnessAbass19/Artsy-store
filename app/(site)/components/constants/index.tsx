@@ -89,9 +89,9 @@ const creators = [
 ];
 
 const fadeImage = [
-  "/assets/Fade-Images/Top.png",
-  "/assets/Fade-Images/black.png",
-  "/assets/Fade-Images/Rectangle.png",
+  "/assets/Fade-images/Top.png",
+  "/assets/Fade-images/black.png",
+  "/assets/Fade-images/Rectangle.png",
 ];
 
 const category = ["editorial", "fashion", "optic", "art & nature", "nature"];
