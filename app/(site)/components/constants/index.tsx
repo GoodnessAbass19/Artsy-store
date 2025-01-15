@@ -49,17 +49,17 @@ const mobileImage = [
 
 const FeaturedProduct = [
   {
-    image: "/assets/Home-Image/boolean.png",
+    image: "/assets/Home-image/boolean.png",
     header: "The Boolean Egyptian",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Nisi fugiat quis expedita pariatur non alias sunt repellatneque delectus! Eius provident minima doloremque cumque?Autem.",
   },
   {
-    image: "/assets/Home-Image/there.png",
+    image: "/assets/Home-image/there.png",
     header: "Are We There Yet?",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Nisi fugiat quis expedita pariatur non alias sunt repellatneque delectus! Eius provident minima doloremque cumque?Autem.",
   },
   {
-    image: "/assets/Home-Image/egypt.jpg",
+    image: "/assets/Home-image/egypt.jpg",
     header: "Oloibiri 1997",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Nisi fugiat quis expedita pariatur non alias sunt repellatneque delectus! Eius provident minima doloremque cumque?Autem.",
   },
